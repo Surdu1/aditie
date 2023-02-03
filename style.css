@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:beige;
+    overflow-x: hidden;
+}
+.introduction{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),  url('atomul.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: backgr 30s linear 5s infinite alternate-reverse;
+    transition: background-color 10s ;
+    position: relative;
+   
+}
+
+.introduction::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(65deg, rgba(2,0,36,0.5) 0%, rgba(9,17,121,0.5) 35%, rgba(255,0,0,0.5) 100%);
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    clip-path: circle(0%);
+    opacity: 0;
+    transition: clip-path 2s,opacity 1s;
+
+}
+.introduction:hover::after{
+    clip-path: circle(150%);
+    opacity: 1;
+}
+.i_text{
+    z-index: 3;
+}
+.i_text h1{
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: azure;
+    font-size: 5vmax;
+    text-shadow:  2px 2px 3px black;
+}
+.i_text p{
+    font-family: 'Satisfy', cursive;
+    color: aqua;
+    font-size: 4vmax;
+    text-shadow:  1px 1px 2px black;
+}
+@keyframes backgr {
+    0%{
+        background-position: start;
+    }
+    50%{
+        background-position: center;
+    }
+    100%{
+        background-position: end
+        ;
+    }
+}
+.referat{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin-bottom: 20px;
+}
+.referat h1{
+    font-family: 'Mochiy Pop One', sans-serif;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.definite img{
+width: 100%;
+margin: auto;
+}
+.definite{
+    width: calc(50% - 10px);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+}
+.definite p{
+    font-family: 'Satisfy', cursive;
+    padding: 10px;
+    font-size: 20px;
+}
+.definite marquee{
+    font-family: 'Mochiy Pop One', sans-serif;
+    padding: 10px;
+}
+.embed{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)), url('preview-127838-4vagQNgzMt-high_0015.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.embed iframe{
+    border: none;
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+}
+.embed h1{
+    padding: 10px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: aliceblue;
+}
